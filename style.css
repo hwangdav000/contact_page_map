@@ -1,0 +1,319 @@
+body {
+  background-color: #9D9393;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  background-color: #322;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  padding: 20px 80px;
+
+}
+
+li a:hover {
+  background-color: #200;
+}
+
+.head1 {
+  color: #FFFFFF;
+  text-align: center;
+  text-decoration: underline
+}
+.head2 {
+  color: #FFFFFF;
+  padding-left: 300px;
+  text-decoration: underline
+}
+
+.column {
+  float: left;
+}
+.separate {
+  clear: both;
+}
+
+.getpic {
+  width: 300px;
+  height: 350px;
+  padding-left: 50px;
+}
+
+.table{
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+}
+.table th{
+  border: 3px solid black;
+}
+.table td{
+  border: 3px solid black;
+}
+.table tr:nth-child(odd){
+  background-color: #C0C0C0;
+  text-align:center;
+}
+.table tr:nth-child(even){
+  background-color: #FFFFFF;
+  text-align:center;
+}
+
+.table tr img {
+  display: none
+}
+
+.table tr:hover img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height :30px;
+  width : 30px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  background-color: #C0C0C0;
+  padding: 50px;
+}
+
+.grid-item {
+  padding: 30px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.pass body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.button {
+  background-color: #C0C0C0;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 50px;
+
+}
+.map1 {
+  height: 600px;
+  width: 900px;
+  margin-right: 20%;
+	margin-top: 5%;
+	float:left;
+  position: absolute;
+}
+.map2 {
+  height: 400px;
+  width: 400px;
+  display: inline-block;
+}
+#container {
+  width: 535px;
+  background: #ffffff;
+  padding: 20px;
+  margin: 90px auto;
+  border-radius: 5px;
+  height: 150px;
+  border: 2px solid gray;
+}
+#header {
+  text-align: center;
+  background-color: #FEFFED;
+  border-radius: 5px;
+  margin: -39px -20px 10px -20px;
+}
+.pass h2{
+  padding-top: 10px;
+}
+#content {
+  margin-left: 57px;
+  margin-top: 40px;
+}
+#register .label1{
+  margin-right:5px;
+}
+#register .input1 {
+  padding: 5px 14px;
+  border: 1px solid #d5d9da;
+  box-shadow: 0 0 9px #0E34F5 inset;
+  width: 272px;
+  font-size: 1em;
+  height: 25px;
+}
+#register .short{
+  font-weight:bold;
+  color:#FF0000;
+  font-size:larger;
+}
+#register .weak{
+  font-weight:bold;
+  color:orange;
+  font-size:larger;
+}
+#register .good{
+  font-weight:bold;
+  color:#2D98F3;
+  font-size:larger;
+}
+#register .strong{
+  font-weight:bold;
+  color: limegreen;
+  font-size:larger;
+}
+
+
+.label1 {
+  padding: 13px 14px 14px 0;
+  display: inline-block;
+}
+
+.label2 {
+  padding: 6px 7px 7px 0;
+  display: inline-block;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #C0C0C0;
+  padding: 10px;
+}
+
+.container2 {
+  border-radius: 5px;
+  background-color: #C0C0C0;
+  padding: 10px;
+  margin-top: 40px;
+  margin-left: 900px;
+}
+
+input[type=text], select {
+  width: 200px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+
+input[type=submit] {
+  width: 100px;
+  background-color: #200;
+  color: white;
+  padding: 14px 22px 14px;
+  border-radius: 4px;
+  cursor:pointer;
+  margin: 8px 0;
+  margin-left: 20%;
+  float: left;
+}
+
+.sizer {
+  width: 150px;
+}
+.col-50 {
+  float: left;
+  width: 50%;
+  margin-top: 5px;
+}
+
+.col-20 {
+  float: left;
+  width: 20%;
+  margin-top: 5px;
+}
+
+.colr-50 {
+
+  width: 50%;
+  margin-top: 5px;
+
+}
+
+.colr-20 {
+
+  width: 20%;
+  margin-top: 5px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: left;
+  margin-top:5px;
+  padding-left: 200px;
+  margin-right: 20%;
+}
+
+.row2:after {
+  content: "";
+  display: table;
+
+  margin-top:5px;
+}
+
+.rowend {
+  float: left;
+  margin-top: 20px
+}
+
+#right-panel {
+  font-family: 'Roboto','sans-serif';
+  line-height: 30px;
+
+  position: absolute;
+  top: 710px;
+  bottom: 3000px;
+}
+
+#right-panel select, #right-panel input {
+  font-size: 15px;
+}
+
+#right-panel select {
+  width: 100%;
+}
+
+#right-panel i {
+  font-size: 12px;
+}
+#right-panel {
+  height: 100%;
+  float: left;
+  width: 250px;
+  overflow: auto;
+}
+#iframe {
+  border: 0px;
+}
+@media print {
+        #map {
+          height: 500px;
+          margin: 0;
+        }
+        #right-panel {
+
+          width: 200px;
+        }
+}

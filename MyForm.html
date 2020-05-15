@@ -1,0 +1,87 @@
+<!DOCTYPE	html>
+<!-- Assignment 2 -->
+<html lang = "en">
+	<head>
+		<meta charset="utf-8">
+		<title>My Forms</title>
+		<link rel="stylesheet" href="style.css">
+
+	</head>
+	<body onload = "initMap()">
+
+		<ul>
+      <li><a class="active" href="MyContacts.html"> My Contacts </a> </li>
+      <li><a href="MyForm.html"> Form Input </a> </li>
+      <li><a href="MyWidgets.html"> My Widgets </a> </li>
+ 		</ul>
+
+		<!-- Start the form -->
+		<!-- method specifies the method of sending the information -->
+		<!-- action is the location of the server script that -->
+		<!-- will be used to process the form -->
+		<!-- format inspired by w3 schools-->
+		<div class = "column">
+		<div class = "container">
+			<form method = "post" action="http://localhost:9001" name= "myform" onsubmit="DoSubmit()">
+
+				<div class = "row">
+					<div class = "col-20">
+						<label class = label1>Name: </label>
+					</div>
+					<div class = "col-50">
+						<input name = "name" id = "name" type = "text" placeholder = "your name" required pattern="[,a-zA-Z_ ]*" title = "Name must be alphanumeric"/>
+					</div>
+				</div>
+
+				<div class = "row">
+					<div class = "col-20">
+						<label class = label1> Email: </label>
+					</div>
+					<div class = "col-50">
+						<input name = "email" type = "text" placeholder = "example@umn.edu" required pattern=".*[@].*" title = "Please include an @ in the email address"/>
+					</div>
+				</div>
+
+				<div class = "row">
+					<div class = "col-20">
+						<label class = label1> Address </label>
+					</div>
+					<div class = "col-50">
+						<input name = "address" id = "autocomplete" type = "text" placeholder = "your address" required pattern="[.,0-9a-zA-Z_ ]*" title = "Address must be alphanumeric"/>
+					</div>
+				</div>
+
+				<div class = "row">
+					<div class = "col-20">
+						<label class = label1> Favorite Place </label>
+					</div>
+					<div class = "col-50">
+						<input name = "place" id = "place" type = "text" placeholder = "your favorite place" required pattern="[,a-zA-Z_ ]*" title = "Place must be alphanumeric"/>
+					</div>
+				</div>
+
+				<div class = "row">
+					<div class = "col-20">
+						<label class = label1> Enter URL for the Favorite Place </label>
+					</div>
+					<div class = "col-50">
+						<input name = "url" type = "text" placeholder = "https://www.website.com" required pattern="https?:\/\/www\..*(.com|.org|.net|.edu|.gov)(\/.*)?" title = "Please enter syntatically valid URL. (Must start with http(s)://)"/>
+				  </div>
+				</div>
+
+				<div class = "row">
+					<input type = "submit" value = "Submit" >
+				</div>
+
+			</form>
+
+		</div>
+		</div>
+		<div class = "column">
+			<div id="map" class = "map2"></div>
+		</div>
+
+		<script src="MapScriptForm.js"> </script>
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsDA_9HOp0H762Zz_yQW_7M0TZ4lcMCxA&libraries=places"></script>
+   </body>
+</html>

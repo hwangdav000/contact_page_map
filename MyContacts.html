@@ -1,0 +1,160 @@
+<!DOCTYPE	html>
+<!-- Assignment 2 -->
+<!-- NEED TO CHANGE INLINE STYLE WITH FLOAT LEFT -->
+<html lang = "en">
+   <head>
+      <meta charset="utf-8">
+      <!-- stop linking of phone numbers -->
+      <meta name="format-detection" content="telephone=no">
+      <title>My Contacts</title>
+      <link rel="stylesheet" href="style.css">
+      <script src="MapScript.js"> </script>
+      <script src="SlideShow.js"> </script>
+   </head>
+
+   <body>
+    <ul>
+      <li><a class="active" href="MyContacts.html"> My Contacts </a> </li>
+      <li><a href="MyForm.html"> Form Input </a> </li>
+      <li><a href="MyWidgets.html"> My Widgets </a> </li>
+ 		</ul>
+
+    <h1 class = "head2">My Contacts</h1>
+      <div class = "column">
+      	<table id = "mytable" class = "table">
+		      <tr>
+            <th>Name</th>
+			      <th>email</th>
+			      <th>Address</th>
+			      <th>Phone Number</th>
+            <th>Favorite Place
+		      </tr>
+
+          <tr onmouseover="showPic(1)">
+			      <td>Ruofeng Liu <img src="ruofeng.jfif" alt="Ruofeng"/> </td>
+			      <td>liux4189@umn.edu</td>
+			      <td><br>Keller Hall, Room 2-209<br><br>200 Union Street SE<br><br>Minneapolis, MN 55425<br></td>
+			      <td>(612)625-4002</td>
+			      <td><a href= "https://www.google.com/maps/place/Target/@45.1364012,-93.4837213,15z/data=!3m1!4b1!4m5!3m4!1s0x52b34707a815e16d:0xc9195411421a3141!8m2!3d45.1364015!4d-93.474988">Target</a></td>
+			    </tr>
+
+	 		   <tr onmouseover="showPic(2)">
+			      <td>Zoe Kang <img src="girl.jpg" alt="girl"/> </td>
+			      <td>zeo22@gmail.com</td>
+			      <td><br>Digital Technology Center, Room 999 <br><br>117 Pleasant Street SE<br><br>Minneapolis, MN 55425<br></td>
+			      <td>(334)577-5510</td>
+			      <td> <a href= "https://www.google.com/maps/place/Walmart+Supercenter/@45.13606,-93.7544854,10z/data=!4m8!1m2!2m1!1swalmart!3m4!1s0x52b3465abaac29d5:0x35c05e774c3cf9a4!8m2!3d45.1261447!4d-93.4943463">Walmart</a></td>
+			   </tr>
+
+			   <tr onmouseover="showPic(3)">
+			      <td>Yang He <img src="yang.jfif" alt="yang"/> </td>
+			      <td>he000242@umn.edu</td>
+			      <td><br>Coffman Memorial Union, Room 3 <br><br>300 Washington Ave SE<br><br>Minneapolis, MN 55455<br></td>
+			      <td>(612) 625-4002</td>
+			      <td> <a href= "https://www.google.com/maps/place/Chipotle+Mexican+Grill/@45.1353783,-93.7544873,10z/data=!4m8!1m2!2m1!1schipotle!3m4!1s0x52b36942eefe6ec3:0x6efdcc6ae6135a8d!8m2!3d45.3012649!4d-93.5551021">Chipotle</a></td>
+			   </tr>
+
+	 		   <tr onmouseover="showPic(4)">
+			     <td>David Hwang <img src="david.jpeg" alt="David"/> </td>
+			     <td>hwan0259@umn.edu</td>
+			     <td><br>Station on Washington, Room 319 <br><br>616 Washington Ave SE<br><br>Minneapolis, MN 55414<br></td>
+			     <td>(612)799-6924</td>
+			     <td> <a href= "https://www.google.com/maps/search/afro+Deli/@45.2170383,-93.5233633,10z/data=!3m1!4b1">Afro Deli</a></td>
+			   </tr>
+
+      </table>
+    </div>
+
+    <div class = "column">
+      <img src="gophers-mascot.png" id = "image" class = getpic alt = "gopher mascot"/>
+      <br/>
+      <br/>
+      <input type = "button" value ="Start" class = "button" onClick = "Start()" />
+      <input type = "button" value ="Stop" class ="button" onClick = "Stop()"/>
+    </div>
+
+    <div class = "separate"></div>
+    <div class = "column">
+      <div id="map" class = "map1"></div>
+      <div id="right-panel"></div>
+    </div>
+
+    <div class = "column">
+      <div class = "container2">
+        <form id = "myForm" onsubmit = "find_service()">
+          <div class = "row2">
+            <div class = "colr-20">
+              <label class = label2>Find: </label>
+            </div>
+            <div class = "colr-50">
+              <select id="mySelect" class = "sizer" onchange="turnOn(this)">
+                <option value = "restaurant">restaurant</option>
+                <option value = "hospital">hospital</option>
+                <option value = "parking">parking</option>
+                <option value = "supermarket">supermarket</option>
+                <option value = "other">other</option>
+              </select>
+            </div>
+          </div>
+
+          <div class = "row2">
+            <div class = "colr-20">
+            </div>
+            <div class = "colr-50">
+              <input name = "other" id="other" type = "text" placeholder = "Enter other places" disabled/>
+            </div>
+          </div>
+
+          <div class = "row2">
+            <div class = "colr-20">
+              <label class = label2> In </label>
+            </div>
+            <div class = "colr-50">
+              <input name = "range" id= "range" type = "text" placeholder = "500" required pattern="[0-9]*"/>
+            </div>
+          </div>
+
+          <div class = "row2">
+            <input type = "submit" value = "Search" >
+          </div>
+      </form>
+    </div>
+
+    <div class = "container2">
+      <form id = "myForm2" onsubmit = "GetDirections()">
+        <div class = "row2">
+          <div class = "colr-20">
+            <label class = label2>Direction To: </label>
+          </div>
+          <div class = "colr-50">
+              <input name = "destination" id="destination" type = "text" placeholder = "Enter destination" />
+          </div>
+        </div>
+
+        <div class = "row2">
+          <div class = "colr-20">
+            <label class = label2>By: </label>
+          </div>
+          <div class = "colr-50">
+
+              <input type="radio" id="Walk" name="by" value="WALKING">
+              <label for="Walk">Walk</label><br>
+              <input type="radio" id="Drive" name="by" value="DRIVING">
+              <label for="Drive">Drive</label><br>
+              <input type="radio" id="Transit" name="by" value="TRANSIT">
+              <label for="Transit">Transit</label>
+
+          </div>
+        </div>
+
+        <div class = "row2">
+          <input type = "submit" value = "Go" >
+        </div>
+      </form>
+    </div>
+  </div>
+  <script
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsDA_9HOp0H762Zz_yQW_7M0TZ4lcMCxA&libraries=places&callback=initMap"
+async defer></script>
+  </body>
+</html>
